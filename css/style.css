@@ -1,1 +1,13 @@
-body{margin-top:2px;background-color:red}
+/* line 1, D:/pinkhead/real_estate/scss/style.scss */
+body {
+  margin-top: 2px;
+  background-color: red;
+}
+
+/* line 4, D:/pinkhead/real_estate/scss/style.scss */
+body link {
+  width: 20%;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

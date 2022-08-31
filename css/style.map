@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"body {\n    margin-top: 2px;\n    background-color: red;\n    & link {\n        width: 20%;\n        display: block;\n    }\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,GAAG;EACf,gBAAgB,EAAE,GAAG;CAKxB;;;AAPD,AAGI,IAHA,CAGE,IAAI,CAAC;EACH,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,KAAK;CACjB"
+}
