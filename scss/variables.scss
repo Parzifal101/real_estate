@@ -1,0 +1,8 @@
+$main_color: #4D85EF; //Основной цвет
+$grey_color: #dadada; //Серый цвет
+$main_gradient: linear-gradient(#3A3E4B, #1C1F2A); //Основной градиент
+//Блюр фона
+%blur {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
