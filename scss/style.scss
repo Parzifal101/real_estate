@@ -1,187 +1,231 @@
-// Шрифты
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import "reset.scss";
-@import "variables.scss";
-.slider-container {
-    display: block;
-    width: 100%;
-}
-
-.slider-wrapper {
-    display: block;
-    width: 100%;
-    padding: 4em;
-    padding-left: 8%;
-    padding-left: 8%;
-}
-
-.menu-point {
-    font-size: 16px;
-    font-weight: 600;
-    color: $grey_color;
-    span {
-        font-weight: 700;
-        color: #000;
+    // Шрифты
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    @import "reset.scss";
+    @import "variables.scss";
+    .slider-container {
+        display: block;
+        width: 100%;
     }
-}
-
-.menu-header {
-    width: 38%;
-    font-size: 44px;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.slider-elements {
-    display: flex;
-    width: 100%;
-    height: 1080px;
-}
-
-.slider-left {
-    display: block;
-    width: 38%;
-    height: 20%;
-    hr {
-        position: absolute;
-        width: 2px;
-        height: 380px;
-        margin-left: 1rem;
-        margin-top: 4em;
-        border: none;
-        background: linear-gradient(#ffffff, #4f5057);
+    
+    .slider-wrapper {
+        display: block;
+        width: 100%;
+        padding: 4em;
+        padding-left: 8%;
+        padding-left: 8%;
     }
-    span {
+    
+    .menu-point {
+        font-size: 16px;
         font-weight: 600;
         color: $grey_color;
-        margin-right: 4%;
-    }
-    ul {
-        margin-top: 3em;
-        margin-left: 4%;
-    }
-    li {
-        font-weight: 500;
-        color: #000;
-        padding: 1rem;
-        padding-top: 1.5em;
-        font-size: 24px;
-        cursor: pointer;
-    }
-    li:hover {
         span {
-            color: $main_color;
-            transition: ease 1s;
+            font-weight: 700;
+            color: #000;
         }
     }
-    button {
-        display: block;
-        width: 120px;
-        height: 36px;
-        margin-left: 4%;
-        margin-top: 16%;
-        background-color: transparent;
-        border: 1.5px solid #000;
-        border-radius: 4px;
-        font-size: 14px;
+    
+    .menu-header {
+        width: 38%;
+        font-size: 44px;
         font-weight: 600;
+        margin-top: 1rem;
     }
-    .active-btn {
-        color: $main_color;
-    }
-}
-
-.slider-right {
-    width: 60%;
-    margin-left: 10%;
-    margin-right: 8%;
-    position: relative;
-    top: -20px;
-}
-
-.slider-right-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.photo-desc {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 540px;
-    overflow: hidden;
-    transition: ease-in 0.5s;
-}
-
-.bg-img {
-    width: 100%;
-    height: 100%;
-    transition: ease-in 0.5s;
-    position: relative;
-}
-
-.description {
-    position: absolute;
-    width: 50%;
-    height: 120px;
-    margin-right: 50%;
-    margin-top: 50%;
-    padding: 2em;
-    justify-content: center;
-    font-weight: 200;
-    background: $main_gradient;
-    color: #ffffff;
-    font-size: 14px;
-    z-index: 1;
-}
-
-.title {
-    position: absolute;
-    width: 24%;
-    height: 120px;
-    margin-top: 50%;
-    margin-left: 50%;
-    z-index: 1;
-    p {
-        position: relative;
-        z-index: 3;
-        font-size: 16px;
-        color: #fff;
-        padding: 2em;
+    
+    .slider-elements {
+        display: flex;
         width: 100%;
-        font-weight: 300;
+        height: 1080px;
     }
-    span {
-        font-weight: 500;
-        font-size: 12px;
+    
+    .slider-left {
+        display: block;
+        width: 38%;
+        height: 20%;
+        hr {
+            position: absolute;
+            width: 2px;
+            height: 380px;
+            margin-left: 1rem;
+            margin-top: 4em;
+            border: none;
+            background: linear-gradient(#ffffff, #4f5057);
+        }
+        span {
+            font-weight: 600;
+            color: $grey_color;
+            margin-right: 4%;
+        }
+        ul {
+            margin-top: 3em;
+            margin-left: 4%;
+        }
+        li {
+            font-weight: 500;
+            color: #000;
+            padding: 1rem;
+            padding-top: 1.5em;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        li:hover {
+            span {
+                color: $main_color;
+                transition: ease 1s;
+            }
+        }
+        button {
+            display: block;
+            width: 120px;
+            height: 36px;
+            margin-left: 4%;
+            margin-top: 16%;
+            background-color: transparent;
+            border: 1.5px solid #000;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .active-btn {
+            color: $main_color;
+        }
     }
-    .blur {
-        position: absolute;
+    
+    .slider-right {
+        width: 60%;
+        margin-left: 10%;
+        margin-right: 8%;
+        position: relative;
+        top: -20px;
+    }
+    
+    .slider-right-wrapper {
+        position: relative;
         width: 100%;
         height: 100%;
-        z-index: 2;
-        @extend %blur;
+        overflow: hidden;
     }
-}
-
-.hide {
-    opacity: 0%;
-}
-
-.show {
-    opacity: 100%;
-}
-
-.cursor {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    pointer-events: none;
-    position: absolute;
-    background-size: 100%;
-    box-sizing: border-box;
-    transition: 0, 1s;
-    transform: translate(-50%, -50%);
-}
+    
+    .photo-desc {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 540px;
+        overflow: hidden;
+        transition: ease-in 0.5s;
+    }
+    
+    .bg-img {
+        width: 100%;
+        height: 100%;
+        transition: ease-in 0.5s;
+        position: relative;
+    }
+    
+    .description {
+        position: absolute;
+        width: 50%;
+        height: 120px;
+        margin-right: 50%;
+        margin-top: 50%;
+        padding: 2em;
+        justify-content: center;
+        font-weight: 200;
+        background: $main_gradient;
+        color: #ffffff;
+        font-size: 14px;
+        z-index: 1;
+    }
+    
+    .title {
+        position: absolute;
+        width: 24%;
+        height: 120px;
+        margin-top: 50%;
+        margin-left: 50%;
+        z-index: 1;
+        p {
+            position: relative;
+            z-index: 3;
+            font-size: 16px;
+            color: #fff;
+            padding: 2em;
+            width: 100%;
+            font-weight: 300;
+        }
+        span {
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .blur {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            @extend %blur;
+        }
+    }
+    
+    .hide {
+        opacity: 0%;
+    }
+    
+    .show {
+        opacity: 100%;
+    }
+    
+    .cursor {
+        display: flex;
+        height: 64px;
+        width: 64px;
+        pointer-events: none;
+        position: absolute;
+        background-size: 100%;
+        box-sizing: border-box;
+        transition: 0, 1s;
+        transform: translate(-50%, -50%);
+    }
+    
+    @media screen and (max-device-width: 430px) {
+        .slider-right {
+            width: 100%;
+            margin-top: 28%;
+            margin-left: 42%;
+            margin-right: 0%;
+            height: 700px;
+            .description {
+                display: none;
+            }
+            .title {
+                display: none;
+            }
+        }
+        .slider-left {
+            width: 6%;
+            ul {
+                margin-left: 0%;
+            }
+            li {
+                padding-left: 0%;
+                font-size: 18px;
+            }
+            hr {
+                height: 59%;
+            }
+            button {
+                width: 300px;
+                margin-top: 44%;
+                margin-left: 12%;
+            }
+        }
+        .slider-wrapper {
+            padding-right: 2em;
+            padding-left: 1em;
+        }
+        .menu-header {
+            padding-left: 1ex;
+        }
+        .menu-point {
+            padding-left: 1.5rem;
+        }
+    }
