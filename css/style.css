@@ -72,6 +72,8 @@ img {
 .slider-container {
   display: block;
   width: 100%;
+  top: -32px;
+  background-color: #fff;
 }
 
 .slider-wrapper {
@@ -93,8 +95,8 @@ img {
 }
 
 .menu-header {
-  width: 38%;
-  font-size: 44px;
+  width: 100%;
+  font-size: 36px;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -248,6 +250,13 @@ img {
   box-sizing: border-box;
   transition: 0, 1s;
   transform: translate(-50%, -50%);
+}
+
+.test-div {
+  display: block;
+  width: 100%;
+  height: 700px;
+  background-image: url(https://img.freepik.com/free-vector/neon-megapolis-background-with-buildings-skyscrapers_1441-2587.jpg?w=2000);
 }
 
 @media screen and (max-device-width: 430px) {

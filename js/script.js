@@ -1,25 +1,12 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
-    const cursor = document.querySelector(".cursor");
-
-    const mouseMove = function(e) {
-        let x = e.clientX;
-        let y = e.clientY;
-        cursor.style.left = x + "px";
-        cursor.style.top = y + "px";
-    };
-
-    document.addEventListener("mousemove", mouseMove);
     const slides = document.querySelectorAll('.photo-desc'),
         leftMenu = document.querySelector('.slider-left'),
-        slideBtns = document.querySelectorAll('.slider-left li');
+        rightMenu = document.querySelector('.slider-right'),
+        slideBtns = document.querySelectorAll('.slider-left li'),
+        sliderContainer = document.querySelector('.slider-container');
 
-
-
-
-
-    console.log(slides[0].childNodes[5]);
 
     function showSlide(i = 0) {
         slides[i].classList.remove('hide');
@@ -39,28 +26,68 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-
-
         slideBtns.forEach(btn => {
             btn.childNodes[0].classList.remove('active-btn');
         });
 
     }
+
     hideSlide();
     showSlide();
+    screenTest();
 
     leftMenu.addEventListener('click', e => {
         const target = e.target;
-
+        console.log(document.clientY);
         if (target) {
 
             slideBtns.forEach((btn, i) => {
                 if (target == btn) {
-                    hideSlide(i - 1);
-                    showSlide(i);
+                    screenTest(i);
                 }
             });
         }
     });
+
+
+
+    function screenTest(i) { //В данной функции используется ветвление для разных устройств
+        if (screen.width < 430) {
+            test();
+        } else {
+            hideSlide(i - 1);
+            showSlide(i);
+        }
+    }
+
+    function test() {
+        window.addEventListener('scroll', startSliderByScroll);
+        leftMenu.style.display = "none";
+        rightMenu.style.cssText = "margin-left: 2%;";
+    }
+
+    function startSliderByScroll() {
+
+        if (window.pageYOffset > 730 && window.pageYOffset < window.pageYOffset + document.documentElement.clientHeight) {
+            sliderContainer.style.position = "fixed";
+            window.addEventListener('scroll', (e) => {
+                console.log(document.documentElement.clientHeight);
+                var st = window.pageYOffset || document.documentElement.scrollTop;
+                let lastScrollTop = 0;
+                if (st > lastScrollTop) {
+                    console.log("down");
+
+                } else {
+                    console.log("up");
+                }
+
+            });
+        }
+
+    }
+
+
+
+
 
 });
