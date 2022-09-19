@@ -30,6 +30,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  white-space: normal;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */

@@ -4,15 +4,18 @@ window.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll('.photo-desc'),
         leftMenu = document.querySelector('.slider-left'),
         rightMenu = document.querySelector('.slider-right'),
+        mobileWrapper = document.querySelector('.slider-right-wrapper'),
         slideBtns = document.querySelectorAll('.slider-left li'),
         sliderContainer = document.querySelector('.slider-container');
 
+
+    console.log(slides[0]);
 
     function showSlide(i = 0) {
         slides[i].classList.remove('hide');
         slides[i].classList.add('show');
 
-        slides[i].childNodes[5].style.transform = `translateY(${0}px)`;
+        slides[i].style.transform = `translateY(${-840}px)`;
 
         slideBtns[i].childNodes[0].classList.add('active-btn');
     }
@@ -22,7 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
             slide.classList.remove('show');
             slide.classList.add('hide');
             if (slide.classList.contains('hide')) {
-                slide.childNodes[5].style.transform = `translateY(${2000}px)`;
+                slide.style.transform = `translateY(${-840}px)`;
             }
         });
 
@@ -32,8 +35,29 @@ window.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    hideSlide();
-    showSlide();
+    function rollSlideUp(i = 0) {
+        // console.log(slides[i].offsetHeight * (-1));
+        let counter = 0;
+        slides.forEach((slide, i) => {
+            // console.log(slide.offsetHeight);
+            slide.style.transform = `translateY(${slide.offsetHeight * (-1)}px)`;
+            counter = slide.offsetHeight * (-1);
+            // counter *= 2;
+        });
+        slides[i].style.transform = `translateY(${slides[i].offsetHeight * (-1)}px)`;
+        console.log(counter);
+
+    }
+
+    // function rollSlideDown(i = 0) {
+    //     slides.forEach((slide, i) => {
+    //         // console.log(slide.offsetHeight);
+    //         slide.style.transform = `translateY(${560}px)`;
+    //     });
+
+    // }
+    // hideSlide();
+    // showSlide();
     screenTest();
 
     leftMenu.addEventListener('click', e => {
@@ -43,7 +67,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
             slideBtns.forEach((btn, i) => {
                 if (target == btn) {
-                    screenTest(i);
+                    // hideSlide();
+                    // showSlide();
+                    // rollSlideDown();
+                    rollSlideUp();
+
                 }
             });
         }
@@ -51,39 +79,34 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-    function screenTest(i) { //В данной функции используется ветвление для разных устройств
+    function screenTest() { //В данной функции используется ветвление для разных устройств
         if (screen.width < 430) {
             test();
         } else {
-            hideSlide(i - 1);
-            showSlide(i);
+            // hideSlide(i - 1);
+            // showSlide(i);
         }
     }
 
     function test() {
-        window.addEventListener('scroll', startSliderByScroll);
+        window.addEventListener('scroll', startSliderBySwipe);
         leftMenu.style.display = "none";
         rightMenu.style.cssText = "margin-left: 2%;";
+        mobileWrapper.style.overflow = "scroll";
     }
 
-    function startSliderByScroll() {
-
+    function startSliderBySwipe() {
         if (window.pageYOffset > 730 && window.pageYOffset < window.pageYOffset + document.documentElement.clientHeight) {
-            sliderContainer.style.position = "fixed";
-            window.addEventListener('scroll', (e) => {
-                console.log(document.documentElement.clientHeight);
-                var st = window.pageYOffset || document.documentElement.scrollTop;
-                let lastScrollTop = 0;
-                if (st > lastScrollTop) {
-                    console.log("down");
+            // sliderContainer.style.position = "fixed";
 
-                } else {
-                    console.log("up");
-                }
-
-            });
         }
-
+        if (window.pageYOffset > window.innerHeight) {
+            console.log(window.innerHeight);
+            sliderContainer.style.position = "fixed";
+        }
+        console.log(window.pageYOffset);
+        // console.log(window.innerHeight);
+        // mobileWrapper.addEventListener('scroll', rollSlideUp);
     }
 
 
