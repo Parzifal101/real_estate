@@ -64,18 +64,82 @@ img {
 }
 
 /* КОНЕЦ СБРОСА СТИЛЕЙ */
-.title .blur {
+.main-buttons .our-projets, .main-buttons .our-customers, .title .blur {
   background: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
 
 header {
-  background-color: aqua;
+  color: white;
+  position: absolute;
+  background: transparent;
+  height: 120px;
+  width: 100%;
+  z-index: 2;
 }
 
 nav {
+  height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  width: 20%;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+nav li {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 1em;
+  margin-left: 2em;
+  cursor: pointer;
+}
+nav li:hover {
+  border: 1px solid #fff;
+}
+nav .logo-wrapper {
+  width: 80px;
+  margin-left: 12%;
+}
+
+.contact-btn {
+  width: 10%;
+  display: flex;
+  height: 60px;
+  border: 1px solid;
+  margin-left: auto;
+  margin-right: 12%;
+  float: right;
+}
+.contact-btn button {
+  font-size: 16px;
+  width: 100%;
+  height: 60px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background: linear-gradient(240deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.contact-btn button:hover {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .slider-container {
@@ -149,7 +213,7 @@ nav {
   cursor: pointer;
 }
 .slider-left li:hover span {
-  color: #4D85EF;
+  color: #4681f0;
   transition: ease 1s;
 }
 .slider-left button {
@@ -165,7 +229,7 @@ nav {
   font-weight: 600;
 }
 .slider-left .active-btn {
-  color: #4D85EF;
+  color: #4681f0;
 }
 
 .slider-right {
@@ -260,17 +324,92 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-.test-div {
-  display: block;
-  width: 100%;
-  height: 700px;
-  background-image: url(https://img.freepik.com/free-vector/neon-megapolis-background-with-buildings-skyscrapers_1441-2587.jpg?w=2000);
-}
-
 .main-container {
   height: 1100px;
   background-image: url(/img/main-bg.jpg);
   background-size: 100% 100%;
+}
+
+.main-wrapper {
+  width: 80%;
+  height: 100%;
+  padding-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-head {
+  width: 70%;
+  margin-left: 4%;
+}
+.main-head h1 {
+  color: #fff;
+  font-size: 106px;
+  font-weight: 600;
+}
+
+.main-desc {
+  width: 34%;
+  margin-left: 14%;
+  margin-top: 2em;
+  font-size: 22px;
+  color: #fff;
+}
+.main-desc button {
+  width: 180px;
+  height: 54px;
+  margin-top: 2em;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4681f0;
+  border: none;
+  transition: background-color 1s;
+}
+.main-desc button:hover {
+  background: linear-gradient(240deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+}
+
+.main-buttons {
+  width: 52%;
+  float: right;
+}
+.main-buttons .our-customers {
+  width: 380px;
+  height: 140px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid;
+}
+.main-buttons .our-projets {
+  width: 380px;
+  height: 140px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid;
+}
+.main-buttons .about-us {
+  width: 380px;
+  height: 140px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: #fff;
+  color: #000;
+}
+.main-buttons .our-hide {
+  width: 380px;
+  height: 140px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-device-width: 430px) {

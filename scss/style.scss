@@ -189,17 +189,100 @@
         transform: translate(-50%, -50%);
     }
     
-    .test-div {
-        display: block;
-        width: 100%;
-        height: 700px;
-        background-image: url(https://img.freepik.com/free-vector/neon-megapolis-background-with-buildings-skyscrapers_1441-2587.jpg?w=2000);
-    }
-    
+    // .test-div {
+    //     display: block;
+    //     width: 100%;
+    //     height: 700px;
+    //     background-image: url(https://img.freepik.com/free-vector/neon-megapolis-background-with-buildings-skyscrapers_1441-2587.jpg?w=2000);
+    // }
     .main-container {
         height: 1100px;
         background-image: url(/img/main-bg.jpg);
         background-size: 100% 100%;
+    }
+    
+    .main-wrapper {
+        width: 80%;
+        height: 100%;
+        padding-top: 8%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .main-head {
+        width: 70%;
+        margin-left: 4%;
+        h1 {
+            color: #fff;
+            font-size: 106px;
+            font-weight: 600;
+        }
+    }
+    
+    .main-desc {
+        width: 34%;
+        margin-left: 14%;
+        margin-top: 2em;
+        font-size: 22px;
+        color: #fff;
+        button {
+            width: 180px;
+            height: 54px;
+            margin-top: 2em;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            background-color: $main_color;
+            border: none;
+            transition: background-color 1s;
+            &:hover {
+                background: linear-gradient(240deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+            }
+        }
+    }
+    
+    .main-buttons {
+        width: 52%;
+        float: right;
+        .our-customers {
+            width: 380px;
+            height: 140px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            @extend %blur;
+            color: #fff;
+            border: 1px solid;
+        }
+        .our-projets {
+            width: 380px;
+            height: 140px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            @extend %blur;
+            color: #fff;
+            border: 1px solid;
+        }
+        .about-us {
+            width: 380px;
+            height: 140px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #fff;
+            color: #000;
+        }
+        .our-hide {
+            width: 380px;
+            height: 140px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     
     @media screen and (max-device-width: 430px) {
