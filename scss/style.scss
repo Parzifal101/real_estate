@@ -189,21 +189,15 @@
         transform: translate(-50%, -50%);
     }
     
-    // .test-div {
-    //     display: block;
-    //     width: 100%;
-    //     height: 700px;
-    //     background-image: url(https://img.freepik.com/free-vector/neon-megapolis-background-with-buildings-skyscrapers_1441-2587.jpg?w=2000);
-    // }
     .main-container {
-        height: 1100px;
+        height: 1000px;
         background-image: url(/img/main-bg.jpg);
         background-size: 100% 100%;
     }
     
     .main-wrapper {
         width: 80%;
-        height: 100%;
+        height: 72%;
         padding-top: 8%;
         margin-left: auto;
         margin-right: auto;
@@ -243,45 +237,168 @@
     
     .main-buttons {
         width: 52%;
+        font-size: 0px;
         float: right;
+        span {
+            font-size: 14px;
+            font-weight: 300;
+        }
         .our-customers {
-            width: 380px;
+            width: 58%;
             height: 140px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
             font-size: 18px;
             @extend %blur;
             color: #fff;
             border: 1px solid;
+            text-align: center;
+            float: right;
+            p {
+                padding-top: 3em;
+            }
         }
         .our-projets {
-            width: 380px;
+            width: 42%;
             height: 140px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
             font-size: 18px;
             @extend %blur;
             color: #fff;
             border: 1px solid;
+            text-align: center;
+            float: right;
+            p {
+                padding-top: 3em;
+            }
         }
         .about-us {
-            width: 380px;
+            width: 58%;
             height: 140px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
             font-size: 18px;
             background-color: #fff;
             color: #000;
+            float: right;
+            .play {
+                width: 32%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 2em;
+                .play-img {
+                    width: 32px;
+                    height: 32px;
+                    float: right;
+                    margin-top: 4%;
+                }
+                p {
+                    display: inline-block;
+                    font-weight: 500;
+                }
+                span {
+                    display: inline-block;
+                    color: $grey_color;
+                }
+            }
         }
-        .our-hide {
-            width: 380px;
-            height: 140px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
+    }
+    
+    .about-video {
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        background-color: #fff;
+    }
+    
+    footer {
+        background-color: #1C1F2A;
+        .footer-wrapper {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8% 0% 2% 0%;
+            .contact-form {
+                width: 100%;
+                color: #fff;
+                span {
+                    color: #fff;
+                }
+                button {
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    right: 232px;
+                    margin-top: 5%;
+                    background: transparent;
+                    border: none;
+                    opacity: 50%;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 100%;
+                    }
+                }
+                input {
+                    width: 20%;
+                    height: 48px;
+                    margin-top: 6%;
+                    float: right;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    font-size: 18px;
+                    color: #fff;
+                    padding-left: 2%;
+                    font-family: 'Inter', sans-serif;
+                    background-image: url(/img/round-email.png);
+                    background-repeat: no-repeat;
+                    background-position: 0px;
+                    background-size: 24px;
+                    &:focus {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+            hr {
+                margin-top: 6%;
+                background-color: rgba(255, 255, 255, 0.5);
+                height: 1px;
+                border: none;
+            }
+            .contact-info {
+                width: 100%;
+                margin-top: 6%;
+                .footer-logo {
+                    width: 64px;
+                }
+                p {
+                    width: 38%;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-weight: 300;
+                    margin-top: 2ex;
+                }
+            }
+            .social-media {
+                width: 100%;
+                margin-top: 8%;
+                color: #fff;
+                font-weight: 400;
+                font-size: 14px;
+                .social-media__icon {
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    float: right;
+                    margin-right: 2em;
+                    background-color: #2d3347;
+                    border-radius: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #3e496d;
+                    }
+                    .social-media__wrapper {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
         }
     }
     

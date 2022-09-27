@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* НАЧАЛО СБРОСА СТИЛЕЙ */
+main {
+  white-space: normal;
+}
+
 /* Указываем box sizing */
 *,
 *::before,
@@ -41,6 +45,13 @@ body {
   line-height: 1.5;
   font-family: "Inter", sans-serif;
   white-space: normal;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/

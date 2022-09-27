@@ -1,5 +1,9 @@
 /* НАЧАЛО СБРОСА СТИЛЕЙ */
 
+main {
+    white-space: normal;
+}
+
 
 /* Указываем box sizing */
 
@@ -49,6 +53,13 @@ body {
     line-height: 1.5;
     font-family: 'Inter', sans-serif;
     white-space: normal;
+}
+
+:active,
+ :hover,
+ :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 
