@@ -110,5 +110,41 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    //VIDEO PLAYER
 
+    const playerBtn = document.querySelector('.play-img');
+    const player = document.querySelector('.about-video');
+    const btns = document.querySelectorAll('.main-buttons div');
+    console.log(btns);
+    playerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        btns.forEach(btn => {
+            btn.style.opacity = "0%";
+        });
+        btns[1].style.opacity = "100%";
+
+        setTimeout(() => {
+            player.style.display = "block";
+
+            setTimeout(() => {
+                player.style.width = "100%";
+
+            }, 200);
+            setTimeout(() => {
+
+                player.style.height = "1000px";
+
+            }, 200);
+            setTimeout(() => {
+
+                player.style.top = "0px";
+            }, 2000);
+
+
+
+        }, 500);
+
+
+    });
 });
