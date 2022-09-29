@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function screenTest() { //В данной функции используется ветвление для разных устройств
         if (screen.width < 430) {
-            test();
+            // test();
         } else {
             // hideSlide(i - 1);
             // showSlide(i);
@@ -115,14 +115,19 @@ window.addEventListener("DOMContentLoaded", () => {
     const playerBtn = document.querySelector('.play-img');
     const player = document.querySelector('.about-video');
     const btns = document.querySelectorAll('.main-buttons div');
-    console.log(btns);
+    const video = document.querySelector('#player');
+    const aboutUs = document.querySelector('.about-us');
+    console.log(btns)
+    video.style.display = "none";
+    // video.style.opacity = "0%";
     playerBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
         btns.forEach(btn => {
             btn.style.opacity = "0%";
+            console.log(btn);
         });
-        btns[1].style.opacity = "100%";
+        btns[2].style.opacity = "100%";
 
         setTimeout(() => {
             player.style.display = "block";
@@ -134,11 +139,14 @@ window.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
 
                 player.style.height = "1000px";
+                video.style.display = "block";
 
             }, 200);
             setTimeout(() => {
 
                 player.style.top = "0px";
+                // video.style.opacity = "100%";
+
             }, 2000);
 
 
@@ -147,4 +155,27 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
     });
+
+    const button = document.querySelector('#menu-btn'),
+        headerMenu = document.querySelector('nav ul');
+
+
+    button.classList.remove('open');
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (button.classList.contains('open')) {
+            button.classList.remove('open');
+            button.classList.add('close');
+            headerMenu.style.opacity = "0%";
+            headerMenu.style.display = "none";
+
+        } else {
+            button.classList.remove('close');
+            button.classList.add('open');
+            headerMenu.style.display = "block";
+            headerMenu.style.opacity = "100%";
+        }
+    });
+
 });
