@@ -117,7 +117,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const btns = document.querySelectorAll('.main-buttons div');
     const video = document.querySelector('#player');
     const aboutUs = document.querySelector('.about-us');
-    console.log(btns)
+    console.log(btns);
     video.style.display = "none";
     // video.style.opacity = "0%";
     playerBtn.addEventListener('click', (e) => {

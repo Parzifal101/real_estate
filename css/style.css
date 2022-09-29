@@ -548,7 +548,7 @@ nav .logo-wrapper {
 
 .main-container {
   height: 1000px;
-  background-image: url(/img/main-bg.jpg);
+  background-image: url(../img/main-bg.jpg);
   background-size: 100% 100%;
 }
 
