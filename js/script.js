@@ -82,6 +82,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function screenTest() { //В данной функции используется ветвление для разных устройств
         if (screen.width < 430) {
             // test();
+            sliderRebuild();
         } else {
             // hideSlide(i - 1);
             // showSlide(i);
@@ -109,6 +110,29 @@ window.addEventListener("DOMContentLoaded", () => {
         // mobileWrapper.addEventListener('scroll', rollSlideUp);
     }
 
+    function sliderRebuild() {
+        const sliderRight = document.querySelector('.slider-right'),
+            allPoints = document.querySelectorAll('.slider-left li');
+
+        sliderRight.style.display = "none";
+        const imgs = ['img/photo-1525351549016-1ddd272c8315.png', 'img/project.jpg', 'img/m1920x1080.jpg', 'img/1.jpg'];
+        for (let i = 0; i < allPoints.length; i++) {
+
+
+            let mobileLayout = document.createElement('div');
+            mobileLayout.innerHTML = ` <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra arcu et ornare consectetur vel lobortis urna</p>
+                <div class="slider-img">
+                    <img src="${imgs[i]}" alt="">
+                </div>`;
+
+
+
+
+            allPoints[i].after(mobileLayout);
+
+        }
+
+    }
 
     //VIDEO PLAYER
 
@@ -159,7 +183,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector('#menu-btn'),
         headerMenu = document.querySelector('nav ul');
 
+    const rights = document.createElement('div');
 
+    rights.innerHTML = "";
     button.classList.remove('open');
     button.addEventListener('click', (e) => {
         e.preventDefault();
@@ -173,8 +199,10 @@ window.addEventListener("DOMContentLoaded", () => {
         } else {
             button.classList.remove('close');
             button.classList.add('open');
-            headerMenu.style.display = "block";
-            headerMenu.style.opacity = "100%";
+
+            headerMenu.style.display = 'block';
+            headerMenu.classList.add('navOpen');
+
         }
     });
 
