@@ -1,5 +1,9 @@
 /* НАЧАЛО СБРОСА СТИЛЕЙ */
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     white-space: normal;
 }
@@ -74,6 +78,9 @@ ul {
 
 a:not([class]) {
     text-decoration-skip-ink: auto;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
 }
 
 

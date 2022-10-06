@@ -26,9 +26,15 @@
                 </div>
             </div>
             <ul>
-                <li>Home</li>
-                <li>Service</li>
-                <li>Project</li>
+                <a href="#our-services">
+                    <li>Our Services</li>
+                </a>
+                <a href="#about-us">
+                    <li> About Us</li>
+                </a>
+                <a href="#our-projects">
+                    <li> Our Projects</li>
+                </a>
                 <div class="rights">
                     <p>2022 © Pinkhead and Doom rights</p>
                 </div>
@@ -36,7 +42,12 @@
             <div class="contact-btn">
                 <button>Contact Us</button>
             </div>
-
+            <!-- <div class="language">
+                <select name="" id="">
+                    <option value="">En</option>
+                    <option value="">Ru</option>
+                </select>
+            </div> -->
         </nav>
 
     </header>
@@ -49,7 +60,7 @@
                     </div>
                     <div class="main-desc">
                         <p>Architecture important for our future. Find your dream easily and faster with us!</p>
-                        <button>Get in touch</button>
+                        <button class="btn btn2"><span>Get in touch</span></button>
                     </div>
                     <div class="explore-more">
                         <img src="" alt="">
@@ -77,6 +88,9 @@
                 </div>
                 <div class="about-video">
                     <div id="player">
+                        <div class="close-btn">
+
+                        </div>
                         <script>
                             var player = new Playerjs({
                                 id: "player",
@@ -93,7 +107,8 @@
         <section>
             <div class="slider-container">
                 <div class="slider-wrapper">
-                    <p class="menu-point"><span>02</span> — Наши услуги</p>
+                    <p class="menu-point">
+                        <a name="our-services"></a><span>02</span> — Наши услуги</p>
                     <p class="menu-header">Мы предоставляем лучшие Cтроительные услуги</p>
                     <div class="slider-elements">
                         <div class="slider-left">
@@ -182,12 +197,14 @@
                 </div>
                 <div class="about-wrapper">
                     <div class="about-2-wrapper">
-                        <p class="about-point"><span>03</span> — Наши услуги</p>
+                        <p class="about-point">
+                            <span>03</span> — About us</p>
                         <h1 class="about-h1">We are your best <br>Architecture</h1>
                         <hr>
                         <div class="about-desc">
+                            <a name="#about-us"></a>
                             <p>Architecture important for our future. Find your dream easily and faster with us! We have been trusted by many big</p>
-                            <button>Learn More</button>
+                            <button class="btn btn2"><span>Learn More</span></button>
                         </div>
                     </div>
                 </div>
@@ -197,11 +214,12 @@
             <div class="project-container">
                 <div class="project-wrapper">
                     <div class="project-up">
-                        <p class="project-point"><span>04</span> — Project</p>
+                        <p class="project-point">
+                            <a name="our-projects"></a><span>04</span> — Project</p>
                         <h1 class="project-h1">The best project that <br>we`ve completed</h1>
                         <div class="project-desc">
                             <p>Architecture important for our future. Find your dream easily and faster with us! We have been trusted by many</p>
-                            <button>Learn More</button>
+                            <button class="btn btn2"><span>Learn More</span></button>
                         </div>
                     </div>
                 </div>
@@ -216,7 +234,7 @@
                         </button>
                         </div>
                         <div class="office">
-                            <p class="office-point"><span>04</span> — Relatif Office</p>
+                            <p class="office-point"><span>01</span> — Relatif Office</p>
                         </div>
                     </div>
                 </div>
@@ -232,8 +250,6 @@
                     <input type="text" placeholder="Your email">
                     <button><img src="../img/arrow-up.png" alt=""></button>
                 </div>
-
-
             </div>
             <hr>
             <div class="contact-info">

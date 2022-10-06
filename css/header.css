@@ -68,4 +68,28 @@ nav .logo-wrapper {
 .contact-btn button:hover {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
+}
+
+@-webkit-keyframes headerAnim {
+  0% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes headerAnim {
+  0% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=header.css.map */

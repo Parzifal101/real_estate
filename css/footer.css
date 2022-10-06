@@ -28,7 +28,7 @@ footer .footer-wrapper .contact-form button {
   width: 24px;
   height: 24px;
   top: -32px;
-  margin-left: 96%;
+  margin-left: 94%;
   background: transparent;
   border: none;
   opacity: 50%;
@@ -45,7 +45,7 @@ footer .footer-wrapper .contact-form input {
   border-bottom: 1px solid #fff;
   font-size: 18px;
   color: #fff;
-  padding-left: 8%;
+  padding-left: 10%;
   font-family: "Inter", sans-serif;
   background-image: url(/img/round-email.png);
   background-repeat: no-repeat;
@@ -76,10 +76,15 @@ footer .footer-wrapper .contact-info p {
 }
 footer .footer-wrapper .social-media {
   width: 100%;
+  display: flex;
+  align-items: center;
   margin-top: 8%;
   color: #fff;
   font-weight: 400;
   font-size: 14px;
+}
+footer .footer-wrapper .social-media span {
+  margin-right: 68%;
 }
 footer .footer-wrapper .social-media .social-media__icon {
   width: 36px;

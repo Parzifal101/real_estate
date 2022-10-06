@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* НАЧАЛО СБРОСА СТИЛЕЙ */
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   white-space: normal;
 }
@@ -63,6 +67,9 @@ ul {
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
 }
 
 /* Упрощаем работу с изображениями */
