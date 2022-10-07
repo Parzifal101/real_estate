@@ -311,6 +311,17 @@ footer .footer-wrapper .social-media .social-media__icon .social-media__wrapper 
   }
 }
 
+.close-btn {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-image: url(/img/eva_close-outline.png);
+  right: 82px;
+  top: 40px;
+  z-index: 3;
+  cursor: pointer;
+}
+
 .btn {
   position: relative;
   display: block;

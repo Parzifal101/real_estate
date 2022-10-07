@@ -9,7 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
         downSliderImg = document.querySelector('.project-down'),
         downSliderBtn = document.querySelector('.slider-btn'),
         downSliderText = document.querySelector('.office-text'),
-        downSliderCounter = document.querySelector('.office-point span');
+        downSliderCounter = document.querySelector('.office-point span'),
+        videoCloseBtn = document.querySelector('.close-btn');
 
 
 
@@ -19,11 +20,27 @@ window.addEventListener("DOMContentLoaded", () => {
             footerRebuild();
         }
     }
-    console.log(slideBtns[0].firstElementChild)
+    console.log(videoCloseBtn);
+    videoCloseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        player.style.width = "0%";
+        player.style.height = "0%";
+        player.remove(video);
+
+
+
+
+        getInTouchBtn.style.zIndex = "1";
+        btns.forEach(btn => {
+            btn.style.opacity = "100%";
+            console.log(btn);
+        });
+        btns[2].style.opacity = "100%";
+
+    });
 
     function rollSlideUp(n = 0) {
-
-
         slides.forEach((slide) => {
             if (n == 0) {
                 const counter = 0;
@@ -154,15 +171,20 @@ window.addEventListener("DOMContentLoaded", () => {
     const video = document.querySelector('#player');
     const aboutUs = document.querySelector('.about-us');
     const getInTouchBtn = document.querySelector('.btn');
+    console.log(player.lastElementChild)
     console.log(btns);
     video.style.display = "none";
     // video.style.opacity = "0%";
     playerBtn.addEventListener('click', (e) => {
         e.preventDefault();
+
+        if (player.lastElementChild != video) {
+            player.add(video);
+        }
         getInTouchBtn.style.zIndex = "0";
         btns.forEach(btn => {
             btn.style.opacity = "0%";
-            console.log(btn);
+
         });
         btns[2].style.opacity = "100%";
 
